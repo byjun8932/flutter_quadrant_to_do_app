@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_quadrant_to_do_app/create_screen.dart';
 
 class ListScreen extends StatelessWidget {
   const ListScreen({super.key});
@@ -23,7 +24,14 @@ class ListScreen extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const CreateScreen(),
+            ),
+          );
+        },
         child: const Icon(Icons.add),
       ),
     );
